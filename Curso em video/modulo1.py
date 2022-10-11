@@ -11,6 +11,7 @@ nome = input("qual o seu nome?")
 #desafio
 #o nome de uma pessoa e mostre uma interação com esse nome
 print(f'Bem vindo, {nome}')#minha opção
+#opcao do prof.: print("É um prazer te conhecer {}!".format(nome))
 #interacao com a data de nascimento
 dia = input('Dia:' )
 mes = input('Mes:' )
@@ -20,3 +21,5 @@ print(f'Voce nasceu no dia {dia} de {mes} de {ano}')
 primeiro_numero = input('Primeiro numero = ')
 segundo_numero = input('Segundo numero = ')
 print(int(primeiro_numero) + int(segundo_numero))
+soma = primeiro_numero + segundo_numero#opcao do prof
+print('O resultado é:', soma)#opcao do prof
