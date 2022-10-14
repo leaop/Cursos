@@ -35,7 +35,7 @@ print('É alfanumérico', a.isalnum())
 print(5+2)
 #Faça um programa que leia o numero inteiro e mostre a tela o seu antecessor e seu sucessor
 #Faça outro programa que mostre o dobro, o triplo e a raiz quadrada de um numero
-#desenvolva um progrma que leia as duas notas de um aluno e mostre a sua média
+#desenvolva um programa que leia as duas notas de um aluno e mostre a sua média
 #Escreva um programa que leia a medida em metros e a converta para centimetros e milimetros
 #Faça um programa que elabora a tabuada de um numero colocado (interação)
 #Crie um programa que leia qunato dinheito uma pessoa tem na carteira e mostre quantos dolares ela pode comprar
