@@ -37,7 +37,6 @@ real = float(input('Quanto voce deseja trocar por dolar:? R$'))
 dolar = real/3.27
 print(f'Isso daria para comprar: U$${dolar}')
 #print('Com R${:.2f} voce pode comprar U$${:.2f}'.format(real, dolar))
-
 """#ad do ultimo (cotação do dia)
 import requests
 import pandas as pd
@@ -47,3 +46,19 @@ import time
 requisicao = requests.get("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL")
 """
 
+#salario com aumento de 15%
+#ficaria basicamente o mesmo codigo de cima
+salario = float(input('Qual seu salário? '))
+aumento = float(input('Qual o aumento que recebeu? '))
+novo = salario + (salario * aumento/100)
+print('Seu novo salario é de {}'.format(novo))
+
+#Quanto sai o aluguel de um carro (com estrutura condicional)
+dias = int(input('Quantos dias voce ficou com o carro alugados? '))
+km = float(input('Quantos km foram rodados? '))
+media = km/dias
+pago = (dias * 60) + (km*0.15)
+if media <= 2000:
+    print('O valor total a pagar é de:', pago)
+else:
+    print('Nesse caso, o valor a pagar fica em:', km*0.15)
