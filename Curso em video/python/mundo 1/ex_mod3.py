@@ -5,7 +5,7 @@
 #faça um programa que leia um arquivo mp3()
 from distutils.command.sdist import sdist
 import math
-num = float(input('Digite um valor: ')
+num = float(input('Digite um valor: '))
 print('O valor digitado foi {} e a sua proção inteira é {}'.format(num, math.trunc(num))))
 #ou
 num2 = float(int('Digite um valor: '))
@@ -45,3 +45,5 @@ pygame.init()
 pygame.mixer.music.load('nome do arquivo')
 pygame.mixer.music.play()
 pygame.event.wait()
+
+
