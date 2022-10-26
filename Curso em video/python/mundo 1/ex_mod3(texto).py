@@ -24,3 +24,21 @@ print('Unidade: {}'.format(u))
 print('Dezena: {}'.format(d))
 print('Centena: {}'.format(c))
 print('Milhar; {}'.format(m))
+
+#Um programa que leia o nome de uma pessoa que tenha SILVA
+nome = str(input('Qual seu nome completo?')).strip() #para tirar os espaços
+print('Seu nome tem Silva? {}'.format('silva' in nome.lower()))
+#oin é um operador que vai verificar a existencia do silva na string do nome
+
+#Faça um program que leia uma frase e mostre quantas vezes temos a letra A e qual sua ultima posição
+frase = str(input('Digite uma frase: ')).upper().strip()
+print('A letra A aparece {} vezes na frase'.format(frase.count('A')))
+print('A primeira letra A apareceu na posição{}'.format(frase.find('A')+1))
+print('A utima letra A aparece na posição {}'.format(frase.rfind('A')+1))
+
+#Faça um rograma que leia o nome da pessoa e mostre o primeiro e o ultimo nome separadamente
+nome = str(input('Digite seu nome: ')).strip()
+n = nome.split()
+print('Muito prazer em te conhecer!')
+print('Seu primeiro nome é {}'.format(n[0]))
+print('Seu ultimo nome é {}'.format(n[len(n)-1])
