@@ -16,3 +16,4 @@ alem dessa forma temos: print('Parabens' if: condição else: 'Precisa melhorar'
 #Pergunte quanto vai ser a extensao da viagem, se for até 200km, de o preco de 0,50 por km e se passar, vais er 0,45 por km
 #
 #calcule se as medidas das retas podem formar um triangulo
+
