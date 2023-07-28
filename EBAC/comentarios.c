@@ -52,7 +52,26 @@ int main()
 
 
         }
-
+ if(opcao==1)//a variavel é igual a 1?
+        {
+            printf("voce escolheu o registro de nomes"\n);
+            system("pause");
+        }
+        if(opcao==2)
+        {
+            printf("voce escolheu consultar os nomes"\n);
+            system("pause");
+        }
+        if(opcao==3)
+        {
+            printf("voce escolheu deletar um cadastro"\n);
+            system("pause");
+        }
+        if(opcao==4|| opcao<=0)
+        {
+            printf("essa opção não está disponível"\n)
+            system("pause");
+        }
        
     }
 
