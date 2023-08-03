@@ -1,6 +1,7 @@
 #include <stdio.h> // conumicacao com o usuário
 #include <stdlib.h> // alocacao de espaço na memória
 #include <locale.h> //alocacao de texto
+#include <string.h>// biblioteca das strings
 
 int teste()
 {
@@ -10,14 +11,78 @@ int teste()
 
 int registro()
 {
-    printf("voce escolheu o registro de nomes\n");
+    char arquivo[40];
+    char cpf[40];
+    char nome[40];
+    char sobrenome[40];
+    char cargo[40];
+
+    printf("Digite o CPF a ser cadastrado: ");
+    scanf("%s", cpf);//enquando digitar 40 numeros, vai colocar no cpf
+    // para não perguntar do usuário duas vezes, armazena o CPF na variável arquivo
+    strcpy(arquivo, cpf);
+    FILE *file;//procupa na biblioteca uma estrutura file pois vai ser criado um arquivo (parece comando SQL)
+    file = fopen(arquivo, "w");//abre um arquivo com o que tiver dentro da variável
+    fprintf(file,cpf);//salva o valor
+    fclose(file);// fechar o arquivo
+    file = fopen(arquivo, "a");//para atualizar o arquivo
+    fprintf(file,",");
+    fclose(file);
+
+    printf("Digite o nome a ser cadastrado: ");
+    scanf("%s", nome);
+    file = fopen(arquivo, "a");
+    fprintf(file, nome);
+    fclose(file);
+    
+    printf("Qual o sobrenome a ser cadastrado: ");
+    scanf("%s", sobrenome);
+    file =  fopen(arquivo, "a");
+    fprintf(file, sobrenome);
+    fclose(file);
+
+    file = fopen(arquivo, "a");
+    fprintf(file, ",");
+    fclose(file);
+
+    printf("Digite o cargo a ser cadastrado: ");
+    scanf("%s", cargo);
+    file = fopen(arquivo, "a");
+    fprintf(file, cargo);
+    fclose(file);
+
     system("pause");
+
+
+
 }
 
 int consulta()
 {
-    printf("voce escolheu a consulta de nomes\n");
+    setlocale(LC_ALL, "Portuguese");
+    char cpf[40];
+    char conteudo[200];
+
+    printf("Digite o cpf a ser consultado:");
+    scanf("%s",cpf);
+
+    FILE *file;
+    file = fopen(cpf, "r");
+
+    if(file == NULL)
+    {
+        printf("não foi possivel localizar arquivo \n");
+
+    }
+    while(fgets(conteudo, 200, file) != NULL)
+    {
+        printf("\nEssas são as informações do usuário: ");
+        printf("%s", conteudo);
+        printf("\n\n");
+    }
+
     system("pause");
+
 }
 
 int deletar()
