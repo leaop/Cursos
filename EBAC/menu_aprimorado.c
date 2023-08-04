@@ -87,8 +87,21 @@ int consulta()
 
 int deletar()
 {
-    printf("voce escolheu deletar nomes\n");
-    system("pause");
+    char cpf[40];
+    printf("Digite o CPF a ser deletado: ");
+    scanf("%s", cpf);//lembtando: vai varrer o que foi digitado na variável p armazenar. como é string, usa o %s
+    remove(cpf);
+
+    FILE *file;
+    file = fopen(cpf, "r");
+
+    if(file == NULL)
+    {
+        printf("O usuário não se encontra no sistema.\n")
+        system("pause");
+    }
+
+
 }
 
 int main()
@@ -114,12 +127,12 @@ int main()
 
         scanf("%d", &opcao);// armazenar na variavel opcao o valor digitado pelo usuario
 
-        system("cls");
+        system("cls");//responsavel por limpar a tela
         switch(opcao)//para diminuir o codigo refazendo o if
         //caso a variavel tenha determinado valor, faça isso. 
         {
             case 1:
-            registro();
+            registro();//chamada de função
             break;
 
             case 2:
