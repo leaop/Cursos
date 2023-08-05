@@ -97,7 +97,7 @@ int deletar()
 
     if(file == NULL)
     {
-        printf("O usuário não se encontra no sistema.\n")
+        printf("O usuário não se encontra no sistema.\n");
         system("pause");
     }
 
