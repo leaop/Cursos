@@ -1,0 +1,37 @@
+INT TESTES
+	100% correta
+	Não necessária para o cliente
+	Não impacta no uso
+
+INT MAIN
+	100% correta
+	Poderia ter mais comentários	
+	Separação com espaço entre algumas funções (não interfere no uso)
+
+	REGISTRO()
+		inicia e encerra na mesma função
+		100% correta
+	CONSULTA()
+		poderia exibir mais comentários
+		inicia e encerra na mesma função
+		100% correta
+	DELETAR()
+		sempre vai retornar que o usuários não está no sistema
+(não impacta na funcionalidade do cliente)
+		inicia e encerra na mesma função
+		100% correta
+
+cenário de teste: 1234
+
+Login: 100% correto
+Inserir:
+	menu funciona corretamente
+	criou arquivo
+	cpf, nome, sobrenome e cargo
+Consultar:
+	consutla a cpf existente: ok
+	consulta a cpf inexistente: ok
+	retorno ao menu: ok
+Deletar:
+	
+	
